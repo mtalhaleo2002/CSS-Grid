@@ -65,11 +65,23 @@ grid-template-rows, grid-template-column & grid-row-gap, grid-column-gap also gr
 
 .container {
     width: 1200px;
-    background: black;
+    background: #efedec;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     display: grid;
-    grid-template-columns: 400px 400px 400px;
-    grid-template-rows: 200px 200px 200px;
+    /* grid-template-columns: repeat(2, 1fr) 1fr; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+    /* 1 fr stands for 1 fractional unit  */
+    /* Suppose if I want to first column 1x and second column can 2x and third can 3x ,what can I do ? */
+    /* grid-template-columns: 1fr 2fr 3fr; */
+    /* Ans: I can do 1fr 2fr 3fr to frid-template-columns.And one more thing is that if we want to any width of that container ,it can give the same result to which iwant in question above . */
+    /* repeat method used for each column value 400px */
+    /* If we want 2 column each value and other can different, then
+     repeat(2, 400px) 500px.
+     
+     If we want 1 column each value and other can different, then
+     400px repeat(1, 400px) 500px.*/
+    grid-template-rows: repeat(3, 200px);
     /* grid-column-gap: 30px;
     grid-row-gap: 30px; */
     grid-gap: 30px;
