@@ -63,14 +63,14 @@ body {
 /* Lecture 1: Introduction To CSS Grid
 grid-template-rows, grid-template-column & grid-row-gap, grid-column-gap also grid-gap row and column Line numbers starts with 1 */
 
-.container {
+/* .container {
     width: 1200px;
     background: #efedec;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    display: grid;
+    display: grid; */
     /* grid-template-columns: repeat(2, 1fr) 1fr; */
     /* grid-template-columns: 1fr 1fr 1fr; */
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
     /* 1 fr stands for 1 fractional unit  */
     /* Suppose if I want to first column 1x and second column can 2x and third can 3x ,what can I do ? */
     /* grid-template-columns: 1fr 2fr 3fr; */
@@ -81,11 +81,60 @@ grid-template-rows, grid-template-column & grid-row-gap, grid-column-gap also gr
      
      If we want 1 column each value and other can different, then
      400px repeat(1, 400px) 500px.*/
-    grid-template-rows: repeat(3, 200px);
+    /* grid-template-rows: repeat(3, 200px); */
     /* grid-column-gap: 30px;
     grid-row-gap: 30px; */
-    grid-gap: 30px;
+    /* grid-gap: 30px; */
     /* You can see that grid-gap can do same as we code 2 lines befores */
     /* But this is not responsove we can doing responsiveness in CSS Grid later.*/
+/* }  */
 
+
+
+/*!----------------------------------------------*/
+
+/* How to Position the grid Items
+1: item1 in place of item3 and vice-versa it will take more works
+2: After that item1 in item9 place */
+
+
+.container {
+    width: 1000px;
+    background: #fafafa;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid #9c9c9c;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 1fr; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 200px);
+    grid-gap: 30px;
+
+}
+
+
+/* 1: item1 in place of item3 and vice-versa it will take more works */
+
+/* .item-1 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.item-2 {
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.item-3 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+} */
+
+/* 2: After that item1 in item9 place */
+
+.item-1 {
+    grid-row: 3/4;
+    grid-column-start: 3;
+    grid-column-end: 4;
 }
