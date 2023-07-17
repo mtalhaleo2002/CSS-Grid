@@ -138,3 +138,24 @@ grid-template-rows, grid-template-column & grid-row-gap, grid-column-gap also gr
     grid-column-start: 3;
     grid-column-end: 4;
 }
+
+.item-2 {
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.item-3 {
+    /* grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2; */
+
+    /* grid-area: 1 / 1 / 2 /2; */
+    /* Grid-area can shortened the code.Syntax following:
+    
+    gird-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+    /* But best is this indiviually specifying the row and column you see in code. */
+
+    grid-row: 1/2;
+    grid-column: 1/2;
+} 
