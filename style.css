@@ -144,7 +144,7 @@ grid-template-rows, grid-template-column & grid-row-gap, grid-column-gap also gr
     grid-column: 2/3;
 }
 
-.item-3 {
+/* .item-3 {
     /* grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
@@ -155,7 +155,30 @@ grid-template-rows, grid-template-column & grid-row-gap, grid-column-gap also gr
     
     gird-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end */
     /* But best is this indiviually specifying the row and column you see in code. */
-
+/* 
     grid-row: 1/2;
     grid-column: 1/2;
-} 
+}  */ 
+
+/* Let,s expand the grid items
+There are 3ways of doing it.
+1: The Normal by giving the row and column line nummbers.
+item 2 within:  grid-area: 1/2/2/4;
+2: By using the span keyword
+3: By using the -1 value to occupy tte space till the end.
+*/
+
+.item-5 {
+    /* grid-area: 2/1/3/4; */
+    grid-row: 2/3;
+    /* grid-column: 1/ span 3;    You can check and edit the number after span keyword  */
+    grid-column: 1 / -1;
+
+}
+
+.item-6 {
+    grid-row: 3/4;
+    grid-column: 1 / -1;
+
+    /* If you,re not giving grid row you can check that @ boxes white and item1-box on the right and than item-6 column expands.And than if you can give grid -row to these than this empty white blocks vanished. */
+}
