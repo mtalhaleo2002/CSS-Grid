@@ -109,6 +109,10 @@ grid-template-rows, grid-template-column & grid-row-gap, grid-column-gap also gr
     grid-template-rows: repeat(3, 200px);
     grid-gap: 30px;
 
+    grid-auto-rows: 200px;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+
 }
 
 
@@ -134,7 +138,7 @@ grid-template-rows, grid-template-column & grid-row-gap, grid-column-gap also gr
 /* 2: After that item1 in item9 place */
 
 .item-1 {
-    grid-row: 3/4;
+    /* grid-row: 3/4; */
     grid-column-start: 3;
     grid-column-end: 4;
 }
@@ -144,7 +148,7 @@ grid-template-rows, grid-template-column & grid-row-gap, grid-column-gap also gr
     grid-column: 2/3;
 }
 
-/* .item-3 {
+.item-3 {
     /* grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
@@ -155,10 +159,10 @@ grid-template-rows, grid-template-column & grid-row-gap, grid-column-gap also gr
     
     gird-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end */
     /* But best is this indiviually specifying the row and column you see in code. */
-/* 
+
     grid-row: 1/2;
     grid-column: 1/2;
-}  */ 
+}  
 
 /* Let,s expand the grid items
 There are 3ways of doing it.
