@@ -100,19 +100,49 @@ grid-template-rows, grid-template-column & grid-row-gap, grid-column-gap also gr
 
 .container {
     width: 1000px;
+    height: 500px;
     background: #fafafa;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border: 1px solid #9c9c9c;
+    padding: 50px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr) 1fr; 
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(3, 200px);
-    grid-gap: 30px;
+    grid-template-columns: repeat(3, 200px); 
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-rows: repeat(2, 150px);
+    /* grid-gap: 30px; */
 
-    grid-auto-rows: 200px;
+    /* grid-auto-rows: 200px;
     grid-auto-flow: column;
-    grid-auto-columns: 1fr;
+    grid-auto-columns: 1fr; */
 
+    /* Justify can be used foor row positioning and align can be column positioning. */
+    justify-content: center;
+    align-content: center;
+    /* Content can be positioned on divs */
+
+
+    /* justify-items: start;
+    align-items: end; */
+    /* Items can be positioned the contenct inside divs*/
+
+}
+
+.item {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    /* justify-items: center;
+    align-items: center; */
+    /* You can change the content and see the difference */
+}
+
+.item-6 {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+
+    /* justify-content: end;
+    align-content: start; */
 }
 
 
@@ -139,13 +169,18 @@ grid-template-rows, grid-template-column & grid-row-gap, grid-column-gap also gr
 
 .item-1 {
     /* grid-row: 3/4; */
-    grid-column-start: 3;
-    grid-column-end: 4;
+    /* grid-column-start: 3;
+    grid-column-end: 4; */
+
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
 
 .item-2 {
-    grid-row: 1/2;
-    grid-column: 2/3;
+    /* grid-row: 1/2;
+    grid-column: 2/3; */
 }
 
 .item-3 {
@@ -160,8 +195,8 @@ grid-template-rows, grid-template-column & grid-row-gap, grid-column-gap also gr
     gird-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end */
     /* But best is this indiviually specifying the row and column you see in code. */
 
-    grid-row: 1/2;
-    grid-column: 1/2;
+    /* grid-row: 1/2;
+    grid-column: 1/2; */
 }  
 
 /* Let,s expand the grid items
@@ -174,15 +209,15 @@ item 2 within:  grid-area: 1/2/2/4;
 
 .item-5 {
     /* grid-area: 2/1/3/4; */
-    grid-row: 2/3;
+    /* grid-row: 2/3; */
     /* grid-column: 1/ span 3;    You can check and edit the number after span keyword  */
-    grid-column: 1 / -1;
+    /* grid-column: 1 / -1; */
 
 }
 
 .item-6 {
-    grid-row: 3/4;
-    grid-column: 1 / -1;
+    /* grid-row: 3/4;
+    grid-column: 1 / -1; */
 
     /* If you,re not giving grid row you can check that @ boxes white and item1-box on the right and than item-6 column expands.And than if you can give grid -row to these than this empty white blocks vanished. */
 }
